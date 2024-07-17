@@ -12,6 +12,7 @@ use App\Http\Requests\AuthUserRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 
+
 class UserController extends Controller
 {
     /**
@@ -153,7 +154,7 @@ class UserController extends Controller
     public function updateUserPassword(Request $request)
     {
         //validate the data
-        $this->validate($request, [
+        $request->validate([
             'currentPassword' => 'required|min:6|max:255',
             'newPassword' => 'required|min:6|max:255'
         ]);

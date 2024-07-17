@@ -20,7 +20,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return ArticleResource::collection(Article::latest()->paginate(2));
+        return ArticleResource::collection(Article::published()->latest()->paginate(2));
     }
 
     /**
