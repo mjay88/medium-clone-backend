@@ -19,7 +19,7 @@
                     </div>
                     <div class="card-body">
                         <h4 class="text-center text-secondary">
-                            Welcome back {{ auth()->guard('admin')->user()->name }}
+                               Welcome back {{ auth()->guard('admin')->user()->name }}
                         </h4>
                     </div>
                 </div>
